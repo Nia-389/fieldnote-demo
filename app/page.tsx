@@ -469,7 +469,9 @@ export default function Home() {
       <aside className="sidebar">
         <div className="brand" onClick={() => setView("dashboard")}><span className="brand-mark">F</span><span>fieldnote</span></div>
         <nav aria-label="Primary navigation">
-          <NavButton active={view === "dashboard"} icon="⌂" label="Overview" onClick={() => setView("dashboard")} />
+          <NavButton active={false} icon="⌂" label="All projects" onClick={() => setView("projects")} />
+          <div className="project-nav-label" aria-hidden="true">PROJECT</div>
+          <NavButton active={view === "dashboard"} icon="▱" label="Project overview" onClick={() => setView("dashboard")} />
           <NavButton active={view === "coding"} icon="✎" label="Code segments" onClick={() => setView("coding")} />
           <NavButton active={view === "import"} icon="＋" label="Documents" onClick={() => setView("import")} />
           <NavButton active={view === "metadata"} icon="≡" label="Metadata" onClick={() => setView("metadata")} />
@@ -487,7 +489,7 @@ export default function Home() {
       <section className="workspace">
         <header className="topbar">
           <div className="project-name"><span className="eyebrow">PROJECT</span><input aria-label="Project name" value={project.name} onChange={(e) => setProject({ ...project, name: e.target.value })} /></div>
-          <div className="top-actions"><button className="text-button" onClick={() => setView("projects")}>All projects</button><button className="text-button" onClick={() => setView("import")}>Add document</button><button className="avatar" title="Local researcher">R</button></div>
+          <div className="top-actions"><button className="text-button" onClick={() => setView("import")}>Add document</button><button className="avatar" title="Local researcher">R</button></div>
         </header>
 
         {view === "dashboard" && <Dashboard project={project} flatSegments={flatSegments} coded={coded} needsReview={needsReview} completion={completion} onContinue={() => setView("coding")} onView={setView} onCreate={() => setNewProjectOpen(true)} />}
@@ -537,7 +539,7 @@ function ConflictDialog({ project, onResolve }: { project: Project; onResolve: (
 function formatDate(value: string) { const date = new Date(value); return Number.isNaN(date.getTime()) ? "Unknown" : new Intl.DateTimeFormat(undefined, { dateStyle: "medium", timeStyle: "short" }).format(date); }
 
 function NavButton({ active, icon, label, onClick, badge }: { active: boolean; icon: string; label: string; onClick: () => void; badge?: number }) {
-  return <button className={`nav-item ${active ? "active" : ""}`} onClick={onClick}><span className="nav-icon">{icon}</span><span>{label}</span>{badge ? <b>{badge}</b> : null}</button>;
+  return <button className={`nav-item ${active ? "active" : ""}`} aria-current={active ? "page" : undefined} aria-label={label} onClick={onClick}><span className="nav-icon" aria-hidden="true">{icon}</span><span>{label}</span>{badge ? <b>{badge}</b> : null}</button>;
 }
 
 function Dashboard({ project, flatSegments, coded, needsReview, completion, onContinue, onView, onCreate }: { project: Project; flatSegments: { doc: Document; segment: Segment }[]; coded: number; needsReview: number; completion: number; onContinue: () => void; onView: (v: View) => void; onCreate: () => void }) {
