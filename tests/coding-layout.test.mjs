@@ -9,8 +9,14 @@ const [page, css] = await Promise.all([
 
 test("keeps segment context sticky on desktop and stacked on narrow screens", () => {
   assert.match(page, /className="sticky-segment-panel"/);
-  assert.match(css, /\.sticky-segment-panel \{ position: sticky;[^}]*max-height:[^}]*overflow-y: auto;/);
-  assert.match(css, /@media \(max-width: 820px\)[\s\S]*\.sticky-segment-panel \{ position: static;[^}]*overflow: visible;/);
+  assert.match(css, /\.coding-layout \{[^}]*align-items: stretch;/);
+  assert.match(css, /\.coding-main \{[^}]*align-self: stretch;/);
+  assert.match(css, /\.sticky-segment-panel \{ position: sticky;[^}]*align-self: start;/);
+  assert.doesNotMatch(css, /\.sticky-segment-panel \{[^}]*overflow-y:/);
+  assert.match(css, /\.paragraph-card \{[^}]*max-height:[^}]*overflow-y: auto;/);
+  assert.match(css, /@media \(max-width: 1010px\)[\s\S]*\.coding-layout \{ display: block;/);
+  assert.match(css, /@media \(max-width: 1010px\)[\s\S]*\.sticky-segment-panel \{ position: static;/);
+  assert.match(css, /@media \(max-width: 1010px\)[\s\S]*\.paragraph-card \{ max-height: none; overflow: visible;/);
 });
 
 test("keeps coding actions and moves qualitative controls into the right rail", () => {
