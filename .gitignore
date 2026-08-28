@@ -40,3 +40,16 @@ next-env.d.ts
 /.wrangler/
 /outputs/
 /work/
+# Fieldnote local research data and backups
+/data/
+/exports/
+/backups/
+
+*.fieldnote.json
+*fieldnote-backup*.json
+*fieldnote_backup*.json
+
+# Fieldnote AI-ready research exports
+gold_annotations_long*.csv
+evaluation_instances*.csv
+
