@@ -95,7 +95,7 @@ const normalizeProject = (project: Project): Project => {
     metadataFields,
     dimensions: project.dimensions.map((dimension) => ({ ...dimension, required: (project.schemaVersion ?? 1) >= 2 ? (dimension.required ?? false) : ["DIM_PROTAGONIST", "DIM_HOPE"].includes(dimension.id), color: legacyColorMap[dimension.color] ?? dimension.color, codes: dimension.codes.map((code) => ({ ...code, color: legacyColorMap[code.color] ?? code.color })) })),
     documents: legacy.documents.map((document) => {
-      const { source, date, ...core } = document;
+      const { source, date, ...core } = document as Document & { source?: string; date?: string };
       return { ...core, metadata: { ...(document.metadata ?? {}), ...(source !== undefined ? { META_SOURCE: source } : {}), ...(date !== undefined ? { META_DATE: date } : {}) }, segments: document.segments.map((segment) => ({ ...segment, notApplicableDimensionIds: segment.notApplicableDimensionIds ?? [] })) };
     }),
   };
@@ -512,6 +512,7 @@ function ProjectHome({ projects, onOpen, onNew, onDemo, onDelete, onExport, onIm
   return <main className="library-shell">
     <header className="library-header"><div className="brand static"><span className="brand-mark">F</span><span>fieldnote</span></div><div><button className="secondary-button compact" onClick={onImport}>Open project file</button><button className="primary-button compact" onClick={onNew}>＋ New project</button></div></header>
     <section className="library-content"><div className="library-intro"><p className="kicker">LOCAL RESEARCH WORKSPACE</p><h1>Your projects</h1><p>Each project keeps its own documents, codebook, annotations, memos, and progress in this browser.</p></div>
+      <div className="prototype-notice"><span>i</span><p><b>Fieldnote prototype — for demonstration and testing.</b> Project data are stored locally in this browser and are not saved to a central server. Export a project backup if you want to keep your work.</p></div>
       {projects.length ? <div className="project-grid">{[...projects].sort((a, b) => b.lastModified.localeCompare(a.lastModified)).map((project) => {
         const segments = project.documents.flatMap((document) => document.segments);
         const coded = segments.filter((segment) => segment.touched).length;

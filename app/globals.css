@@ -287,6 +287,10 @@ kbd { min-width: 21px; height: 20px; padding: 0 5px; display: inline-grid; place
 .library-intro { max-width: 680px; margin-bottom: 36px; }
 .library-intro h1 { margin: 7px 0 11px; font-family: var(--font-lora), Georgia, serif; font-size: 49px; font-weight: 500; letter-spacing: -.03em; }
 .library-intro > p:last-child { color: var(--muted); line-height: 1.6; }
+.prototype-notice { max-width: 820px; margin: -12px 0 32px; padding: 14px 17px; display: flex; align-items: flex-start; gap: 12px; border: 1px solid #d8ddd6; border-radius: 7px; color: var(--muted); background: rgba(255,255,255,.6); }
+.prototype-notice > span { width: 22px; height: 22px; flex: none; display: grid; place-items: center; border-radius: 50%; color: #557a71; background: #e8f0ed; font-size: 11px; font-weight: 800; }
+.prototype-notice p { margin: 0; font-size: 11px; line-height: 1.6; }
+.prototype-notice b { color: var(--ink); }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .project-card { overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); box-shadow: 0 2px 9px rgba(45,65,72,.04); }
 .project-card-main { width: 100%; min-height: 190px; display: grid; grid-template-columns: auto 1fr; gap: 18px; border: 0; padding: 29px 28px 23px; background: transparent; text-align: left; cursor: pointer; }

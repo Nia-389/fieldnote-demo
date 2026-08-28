@@ -1,4 +1,38 @@
-# vinext-starter
+# Fieldnote
+
+Fieldnote is a local-first browser prototype for qualitative document coding.
+The hosted showcase is for demonstration and testing: project data stay in the
+visitor's browser and are not saved to a central Fieldnote server. Browser
+storage is specific to the site origin, browser, and device. Export a Fieldnote
+project backup to preserve work or move it elsewhere.
+
+## GitHub Pages showcase
+
+The showcase branch is `fieldnote-github-pages`. Pushes to that branch run the
+GitHub Pages workflow, build a static site with the `/fieldnote-app/` base
+path, and deploy the generated `out/` directory. No generated build files are
+committed.
+
+To update the showcase:
+
+1. Review and commit the intended prototype changes on
+   `fieldnote-github-pages`.
+2. Push that branch to `origin`.
+3. In GitHub, open **Settings → Pages** and ensure **Source** is set to
+   **GitHub Actions**.
+4. Follow the **Deploy Fieldnote to GitHub Pages** workflow in the Actions tab.
+
+Developers can verify the Pages build locally with:
+
+```bash
+npm ci
+npm run test:unit
+npm run build:pages
+```
+
+The standard local workflow remains `npm run dev`.
+
+## Original starter notes
 
 A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
