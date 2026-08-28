@@ -1,77 +1,68 @@
 # Fieldnote
 
-Fieldnote is a local-first browser prototype for qualitative document coding.
-The hosted showcase is for demonstration and testing: project data stay in the
-visitor's browser and are not saved to a central Fieldnote server. Browser
-storage is specific to the site origin, browser, and device. Export a Fieldnote
-project backup to preserve work or move it elsewhere.
+Fieldnote is a local-first browser prototype for qualitative document coding and the creation of structured, AI-ready annotation datasets.
 
-## GitHub Pages showcase
+The public showcase includes only synthetic demonstration data.
 
-The public showcase repository is
-[`Nia-389/fieldnote-demo`](https://github.com/Nia-389/fieldnote-demo). Pushes to
-the `fieldnote-github-pages` branch run the GitHub Pages workflow, build a static
-site with the `/fieldnote-demo/` base path, and deploy the generated `out/`
-directory. The expected public URL is
-<https://nia-389.github.io/fieldnote-demo/>. No generated build files are
-committed.
+## Public demo
 
-To update the showcase:
+Try Fieldnote here:
 
-1. Review and commit the intended prototype changes on
-   `fieldnote-github-pages`.
-2. Push that branch to `origin`.
-3. In GitHub, open **Settings → Pages** and ensure **Source** is set to
-   **GitHub Actions**.
-4. Follow the **Deploy Fieldnote to GitHub Pages** workflow in the Actions tab.
+https://nia-389.github.io/fieldnote-demo/
 
-Developers can verify the Pages build locally with:
+## What Fieldnote does
 
-```bash
-npm ci
-npm run test:unit
-npm run build:pages
-```
+Fieldnote supports structured qualitative annotation through:
 
-The standard local workflow remains `npm run dev`.
+- documents and text segments;
+- project-specific metadata;
+- coding dimensions and codes;
+- single- and multi-label annotation;
+- explicit “No applicable code” decisions;
+- segment-level memos;
+- confidence and review status;
+- project review and analysis;
+- conventional research exports;
+- AI-ready gold-standard exports for model training and evaluation.
 
-## Original starter notes
+The interface is designed to keep the active text segment visible while coding across multiple dimensions.
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+## Synthetic showcase data
 
-## Prerequisites
+The public version includes a small fictional climate-narratives project created only for demonstration.
 
-- Node.js `>=22.13.0`
+It contains:
 
-## Quick Start
+- 5 synthetic documents;
+- 15 synthetic segments;
+- several example coding dimensions;
+- coded and uncoded segments;
+- single-label and multi-label examples;
+- review and confidence examples;
+- explicit not-applicable decisions.
+
+No real research corpus, annotations, or participant data are included in this repository.
+
+## Local-first data storage
+
+Fieldnote does not require a central Fieldnote server for ordinary use.
+
+Projects created in the app are stored in the visitor’s browser. This means that project data are associated with the specific browser, device, and site origin being used.
+
+Fieldnote does not automatically upload locally created project content to this GitHub repository.
+
+For preservation or transfer between browsers or devices, users should export a Fieldnote project backup.
+
+## Prototype status
+
+Fieldnote is currently a research prototype under active development.
+
+The public deployment is intended for demonstration, testing, and feedback rather than as a production service.
+
+## Local development
+
+To run the project locally:
 
 ```bash
 npm install
 npm run dev
-npm run build
-```
-
-This starter does not use `wrangler.jsonc`.
-
-## Included Shape
-
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
-
-## Useful Commands
-
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
-
-## Learn More
-
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
