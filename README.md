@@ -59,7 +59,7 @@ For preservation or transfer between browsers or devices, users should export a 
 
 ## Research and development
 
-Fieldnote was initiated and developed by **Estefanía Tamayo Pineda** as a research-software project.
+Fieldnote was initiated and developed by Estefanía Tamayo Pineda as a research-software project.
 
 The project is being developed in the context of the **ClimateHopeAI** research group. Additional human contributors will be acknowledged here as they make substantive contributions to the software, research design, documentation, testing, or associated methodology.
 
