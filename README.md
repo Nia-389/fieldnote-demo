@@ -89,7 +89,7 @@ If you use, adapt, or build upon Fieldnote in research, teaching, software devel
 
 For the current prototype, please cite or acknowledge:
 
-> Tamayo Pineda, Estefanía. *Fieldnote*. Research software prototype, 2026.  
+> Tamayo Pineda, Estefania. *Fieldnote*. Research software prototype, 2026.  
 > https://github.com/Nia-389/fieldnote-demo
 
 A formal software citation and DOI may be added to a future stable release.
