@@ -71,9 +71,7 @@ Additional contributors will be added as the project develops.
 
 ## AI-assisted development
 
-Fieldnote has been developed with AI-assisted software development tools, including **OpenAI Codex**.
-
-Codex has been used to support tasks including code generation, refactoring, debugging, testing, documentation, and deployment configuration.
+Fieldnote has been developed with AI-assisted software development tools, including OpenAI Codex. Codex has been used to support tasks including code generation, refactoring, debugging, testing, documentation, and deployment configuration.
 
 The project concept, research requirements, annotation framework, workflow design, interface decisions, validation criteria, and final integration decisions are human-directed. AI-assisted changes are reviewed and tested before incorporation into the project.
 
