@@ -59,13 +59,13 @@ For preservation or transfer between browsers or devices, users should export a 
 
 ## Research and development
 
-Fieldnote was initiated and developed by Estefanía Tamayo Pineda as a research-software project.
+Fieldnote was initiated and developed by Estefania Tamayo Pineda as a research-software project.
 
 The project is being developed in the context of the **ClimateHopeAI** research group. Additional human contributors will be acknowledged here as they make substantive contributions to the software, research design, documentation, testing, or associated methodology.
 
 ### Contributors
 
-- **Estefanía Tamayo Pineda** — project conception, research requirements, annotation workflow, interface and feature design, software development direction, testing and validation.
+- Estefania Tamayo Pineda — project conception, research requirements, annotation workflow, interface and feature design, software development direction, testing and validation.
 
 Additional contributors will be added as the project develops.
 
@@ -98,7 +98,7 @@ A formal software citation and DOI may be added to a future stable release.
 
 Fieldnote is released under the **MIT License**.
 
-Copyright © 2026 Estefanía Tamayo Pineda.
+Copyright © 2026 Estefania Tamayo Pineda.
 
 See the [`LICENSE`](LICENSE) file for details.
 
