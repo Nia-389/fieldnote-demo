@@ -8,9 +8,12 @@ project backup to preserve work or move it elsewhere.
 
 ## GitHub Pages showcase
 
-The showcase branch is `fieldnote-github-pages`. Pushes to that branch run the
-GitHub Pages workflow, build a static site with the `/fieldnote-app/` base
-path, and deploy the generated `out/` directory. No generated build files are
+The public showcase repository is
+[`Nia-389/fieldnote-demo`](https://github.com/Nia-389/fieldnote-demo). Pushes to
+the `fieldnote-github-pages` branch run the GitHub Pages workflow, build a static
+site with the `/fieldnote-demo/` base path, and deploy the generated `out/`
+directory. The expected public URL is
+<https://nia-389.github.io/fieldnote-demo/>. No generated build files are
 committed.
 
 To update the showcase:

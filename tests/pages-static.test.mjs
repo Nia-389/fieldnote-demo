@@ -20,17 +20,17 @@ async function filesUnder(directory) {
 }
 
 test("prefixes every rendered application asset for the repository subpath", async () => {
-  const assets = [...html.matchAll(/(?:href|src)="(\/fieldnote-app\/[^"]+)"/g)].map((match) => match[1]);
+  const assets = [...html.matchAll(/(?:href|src)="(\/fieldnote-demo\/[^"]+)"/g)].map((match) => match[1]);
   assert.ok(assets.length > 5);
-  assert.doesNotMatch(html, /(?:href|src)="\/(?!fieldnote-app\/)/);
+  assert.doesNotMatch(html, /(?:href|src)="\/(?!fieldnote-demo\/)/);
   for (const asset of new Set(assets)) {
-    await access(new URL(`../out/${asset.replace(/^\/fieldnote-app\//, "")}`, import.meta.url));
+    await access(new URL(`../out/${asset.replace(/^\/fieldnote-demo\//, "")}`, import.meta.url));
   }
   assert.match(layout, /NEXT_PUBLIC_BASE_PATH/);
 });
 
 test("ships fonts and assets locally without application analytics or APIs", () => {
-  assert.match(html, /\/fieldnote-app\/_next\/static\/media\/[^"]+\.woff2/);
+  assert.match(html, /\/fieldnote-demo\/_next\/static\/media\/[^"]+\.woff2/);
   assert.doesNotMatch(html, /(?:href|src)="https?:\/\//);
   assert.doesNotMatch(page, /\b(?:fetch|XMLHttpRequest|sendBeacon|WebSocket)\b/);
   assert.doesNotMatch(css, /url\(https?:\/\//);

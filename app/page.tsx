@@ -3,6 +3,7 @@
 import { ChangeEvent, KeyboardEvent, useEffect, useMemo, useRef, useState } from "react";
 import * as XLSX from "xlsx";
 import { buildGoldExports } from "./export-data.js";
+import starterProjectData from "./starter-project.json";
 
 type View = "projects" | "dashboard" | "import" | "coding" | "metadata" | "codebook" | "review" | "analysis" | "export";
 type Confidence = "High" | "Medium" | "Low";
@@ -27,56 +28,7 @@ const LEGACY_STORAGE_KEY = "fieldnote-annotation-project-v1";
 const LIBRARY_STORAGE_KEY = "fieldnote-project-library-v1";
 const palette = ["#606FAF", "#7B8F87", "#9A8FBE", "#A67F70", "#718E94", "#A8BDAA"];
 
-const starterProject: Project = {
-  id: "PRJ001",
-  name: "Climate narratives study",
-  description: "A demonstration project exploring local climate narratives.",
-  createdAt: new Date().toISOString(),
-  lastModified: new Date().toISOString(),
-  schemaVersion: 3,
-  metadataFields: [
-    { id: "META_SOURCE", name: "Source", type: "text", options: [], archived: false, order: 0 },
-    { id: "META_DATE", name: "Date", type: "date", options: [], archived: false, order: 1 },
-  ],
-  documents: [
-    {
-      id: "DOC001",
-      title: "A town prepares for a changing coastline",
-      metadata: { META_SOURCE: "Community Observer", META_DATE: "2026-04-18" },
-      segments: [
-        { id: "DOC001_P001", documentId: "DOC001", number: 1, text: "On a grey Tuesday morning, residents filled the library hall to discuss what the next decade might bring for their coastline. The mood was practical rather than fearful: people wanted to understand the options in front of them.", codeIds: ["COD_COMMUNITY", "COD_HOPE_HIGH"], notApplicableDimensionIds: [], memo: "Collective agency is explicit.", emergingTheme: "Local knowledge as infrastructure", confidence: "High", reviewStatus: "Coded", touched: true },
-        { id: "DOC001_P002", documentId: "DOC001", number: 2, text: "The council presented new flood maps and proposed a series of smaller, reversible interventions. Officials stressed that no single plan had been chosen and invited residents to shape the priorities.", codeIds: ["COD_GOVERNMENT", "COD_RESPONSE_ADAPT"], notApplicableDimensionIds: ["DIM_HOPE"], memo: "", emergingTheme: "", confidence: "High", reviewStatus: "Coded", touched: true },
-        { id: "DOC001_P003", documentId: "DOC001", number: 3, text: "Several shop owners worried about the effect of prolonged construction on the summer season. Others argued that investing now would protect both livelihoods and the character of the high street.", codeIds: [], notApplicableDimensionIds: [], memo: "", emergingTheme: "", confidence: "High", reviewStatus: "Coded", touched: false },
-      ],
-    },
-    {
-      id: "DOC002",
-      title: "New grants back neighbourhood energy projects",
-      metadata: { META_SOURCE: "Regional Desk", META_DATE: "2026-05-02" },
-      segments: [
-        { id: "DOC002_P001", documentId: "DOC002", number: 1, text: "A regional grant programme will fund seven neighbourhood groups to install shared solar panels and improve insulation in older homes.", codeIds: [], notApplicableDimensionIds: [], memo: "", emergingTheme: "", confidence: "High", reviewStatus: "Coded", touched: false },
-        { id: "DOC002_P002", documentId: "DOC002", number: 2, text: "Organisers say the projects will reduce bills while giving residents more control over how energy is produced and used.", codeIds: [], notApplicableDimensionIds: [], memo: "", emergingTheme: "", confidence: "High", reviewStatus: "Coded", touched: false },
-      ],
-    },
-  ],
-  dimensions: [
-    { id: "DIM_PROTAGONIST", name: "PROTAGONIST", type: "single", required: true, color: "#718E94", codes: [
-      { id: "COD_COMMUNITY", name: "Community", definition: "Residents, neighbourhood groups, or civil society lead the action.", origin: "A priori", color: "#EF8354", active: true },
-      { id: "COD_GOVERNMENT", name: "Government", definition: "Public institutions or officials lead the action.", origin: "A priori", color: "#EF8354", active: true },
-      { id: "COD_BUSINESS", name: "Business", definition: "Commercial actors lead the action.", origin: "A priori", color: "#EF8354", active: true },
-    ]},
-    { id: "DIM_HOPE", name: "HOPE", type: "single", required: true, color: "#9A8FBE", codes: [
-      { id: "COD_HOPE_LOW", name: "Low", definition: "Little expectation of a positive outcome.", origin: "A priori", color: "#4C6FFF", active: true },
-      { id: "COD_HOPE_MOD", name: "Moderate", definition: "A qualified or mixed expectation of improvement.", origin: "A priori", color: "#4C6FFF", active: true },
-      { id: "COD_HOPE_HIGH", name: "High", definition: "A strong expectation of a positive outcome.", origin: "A priori", color: "#4C6FFF", active: true },
-    ]},
-    { id: "DIM_RESPONSE", name: "RESPONSE", type: "multiple", required: false, color: "#7B8F87", codes: [
-      { id: "COD_RESPONSE_ADAPT", name: "Adaptation", definition: "Adjustment to actual or expected impacts.", origin: "A priori", color: "#26A69A", active: true },
-      { id: "COD_RESPONSE_MIT", name: "Mitigation", definition: "Action to reduce causes or emissions.", origin: "A priori", color: "#26A69A", active: true },
-    ]},
-  ],
-};
-
+const starterProject = starterProjectData as Project;
 const cloneStarter = () => JSON.parse(JSON.stringify(starterProject)) as Project;
 const makeId = (prefix: string) => `${prefix}_${Date.now().toString(36).toUpperCase()}_${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
 const legacyColorMap: Record<string, string> = { "#EF8354": "#718E94", "#4C6FFF": "#9A8FBE", "#26A69A": "#7B8F87", "#9B5DE5": "#9A8FBE", "#E7A923": "#A67F70", "#E05A8D": "#A8BDAA" };

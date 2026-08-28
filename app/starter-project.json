@@ -1,0 +1,413 @@
+{
+  "id": "PRJ001",
+  "name": "Climate narratives study",
+  "description": "A demonstration project exploring fictional local climate narratives.",
+  "createdAt": "2026-08-28T00:00:00.000Z",
+  "lastModified": "2026-08-28T00:00:00.000Z",
+  "schemaVersion": 3,
+  "metadataFields": [
+    {
+      "id": "META_SOURCE",
+      "name": "Source",
+      "type": "text",
+      "options": [],
+      "archived": false,
+      "order": 0
+    },
+    {
+      "id": "META_DATE",
+      "name": "Date",
+      "type": "date",
+      "options": [],
+      "archived": false,
+      "order": 1
+    }
+  ],
+  "documents": [
+    {
+      "id": "DOC001",
+      "title": "A town prepares for a changing coastline",
+      "metadata": {
+        "META_SOURCE": "Community Observer",
+        "META_DATE": "2026-04-18"
+      },
+      "segments": [
+        {
+          "id": "DOC001_P001",
+          "documentId": "DOC001",
+          "number": 1,
+          "text": "Residents gathered at the town library to discuss how stronger winter storms and rising tides could affect the waterfront over the next decade. Rather than calling for a single large barrier, many participants favoured a series of smaller measures that could be adjusted over time.",
+          "codeIds": [
+            "COD_COMMUNITY",
+            "COD_HOPE_HIGH",
+            "COD_RESPONSE_ADAPT"
+          ],
+          "notApplicableDimensionIds": [],
+          "memo": "Collective agency is explicit.",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": true,
+          "emergingTheme": ""
+        },
+        {
+          "id": "DOC001_P002",
+          "documentId": "DOC001",
+          "number": 2,
+          "text": "The council presented revised flood maps and proposed raising a footpath, restoring dunes and changing drainage around the harbour. Officials said the measures would be tested in stages and altered if local conditions changed.",
+          "codeIds": [
+            "COD_GOVERNMENT",
+            "COD_HOPE_MOD",
+            "COD_RESPONSE_ADAPT"
+          ],
+          "notApplicableDimensionIds": [],
+          "memo": "",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": true,
+          "emergingTheme": ""
+        },
+        {
+          "id": "DOC001_P003",
+          "documentId": "DOC001",
+          "number": 3,
+          "text": "Some shop owners remained concerned that construction could disrupt the summer season, while others asked for clearer information about when each part of the plan might begin.",
+          "codeIds": [],
+          "notApplicableDimensionIds": [],
+          "memo": "",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": false,
+          "emergingTheme": ""
+        }
+      ]
+    },
+    {
+      "id": "DOC002",
+      "title": "Neighbourhood energy groups receive new grants",
+      "metadata": {
+        "META_SOURCE": "Regional Desk",
+        "META_DATE": "2026-05-02"
+      },
+      "segments": [
+        {
+          "id": "DOC002_P001",
+          "documentId": "DOC002",
+          "number": 1,
+          "text": "Seven neighbourhood groups have received small grants to install shared solar panels, improve insulation in older homes and run local energy advice sessions. The groups will decide how the funding is divided across their areas.",
+          "codeIds": [
+            "COD_COMMUNITY",
+            "COD_HOPE_HIGH",
+            "COD_RESPONSE_MIT"
+          ],
+          "notApplicableDimensionIds": [],
+          "memo": "",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": true,
+          "emergingTheme": ""
+        },
+        {
+          "id": "DOC002_P002",
+          "documentId": "DOC002",
+          "number": 2,
+          "text": "Organisers expect the projects to cut household energy use while also helping residents cope with hotter summers through better shading and insulation. They described the programme as a practical way to combine lower emissions with greater resilience.",
+          "codeIds": [
+            "COD_COMMUNITY",
+            "COD_HOPE_HIGH",
+            "COD_RESPONSE_ADAPT",
+            "COD_RESPONSE_MIT"
+          ],
+          "notApplicableDimensionIds": [],
+          "memo": "Response combines adaptation and mitigation.",
+          "confidence": "Medium",
+          "reviewStatus": "Coded",
+          "touched": true,
+          "emergingTheme": ""
+        },
+        {
+          "id": "DOC002_P003",
+          "documentId": "DOC002",
+          "number": 3,
+          "text": "The first installations are expected later in the year, although each neighbourhood must complete a building survey before work begins.",
+          "codeIds": [],
+          "notApplicableDimensionIds": [],
+          "memo": "",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": false,
+          "emergingTheme": ""
+        }
+      ]
+    },
+    {
+      "id": "DOC003",
+      "title": "Wetland project brings back natural flood protection",
+      "metadata": {
+        "META_SOURCE": "Civic News Service",
+        "META_DATE": "2026-05-21"
+      },
+      "segments": [
+        {
+          "id": "DOC003_P001",
+          "documentId": "DOC003",
+          "number": 1,
+          "text": "A council-led restoration project has reopened a former drainage channel and reconnected it with nearby wetlands. Engineers expect the restored area to hold more water during heavy rainfall and reduce pressure on downstream streets.",
+          "codeIds": [
+            "COD_GOVERNMENT",
+            "COD_HOPE_HIGH",
+            "COD_RESPONSE_ADAPT"
+          ],
+          "notApplicableDimensionIds": [],
+          "memo": "",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": true,
+          "emergingTheme": ""
+        },
+        {
+          "id": "DOC003_P002",
+          "documentId": "DOC003",
+          "number": 2,
+          "text": "Local volunteers are planting native reeds and monitoring water levels, but organisers say it will take several seasons before they know how much the restored wetland changes flood risk during extreme weather.",
+          "codeIds": [
+            "COD_COMMUNITY",
+            "COD_HOPE_MOD",
+            "COD_RESPONSE_ADAPT"
+          ],
+          "notApplicableDimensionIds": [],
+          "memo": "Positive outcome remains conditional.",
+          "confidence": "Medium",
+          "reviewStatus": "Needs review",
+          "touched": true,
+          "emergingTheme": ""
+        },
+        {
+          "id": "DOC003_P003",
+          "documentId": "DOC003",
+          "number": 3,
+          "text": "The site also includes a new boardwalk where community groups will run seasonal wildlife surveys and public walks.",
+          "codeIds": [
+            "COD_COMMUNITY",
+            "COD_RESPONSE_ADAPT"
+          ],
+          "notApplicableDimensionIds": [
+            "DIM_HOPE"
+          ],
+          "memo": "",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": true,
+          "emergingTheme": ""
+        }
+      ]
+    },
+    {
+      "id": "DOC004",
+      "title": "Local manufacturer tests lower-emission production",
+      "metadata": {
+        "META_SOURCE": "Local Business Bulletin",
+        "META_DATE": "2026-06-09"
+      },
+      "segments": [
+        {
+          "id": "DOC004_P001",
+          "documentId": "DOC004",
+          "number": 1,
+          "text": "A small manufacturer has begun testing electric heating equipment on one production line and has changed the timing of several energy-intensive processes. The company says the trial is intended to reduce both fuel use and operating costs.",
+          "codeIds": [
+            "COD_BUSINESS",
+            "COD_HOPE_MOD",
+            "COD_RESPONSE_MIT"
+          ],
+          "notApplicableDimensionIds": [],
+          "memo": "",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": true,
+          "emergingTheme": ""
+        },
+        {
+          "id": "DOC004_P002",
+          "documentId": "DOC004",
+          "number": 2,
+          "text": "Managers cautioned that the new equipment may not yet be suitable for every product and that further changes could depend on electricity prices and grid capacity. They said the trial would continue before any wider investment decision is made.",
+          "codeIds": [
+            "COD_BUSINESS",
+            "COD_HOPE_LOW",
+            "COD_RESPONSE_MIT"
+          ],
+          "notApplicableDimensionIds": [],
+          "memo": "Technical and economic uncertainty limits the positive outlook.",
+          "confidence": "Low",
+          "reviewStatus": "Uncertain",
+          "touched": true,
+          "emergingTheme": ""
+        },
+        {
+          "id": "DOC004_P003",
+          "documentId": "DOC004",
+          "number": 3,
+          "text": "The firm will publish a short internal report after six months comparing energy use across the old and new production methods.",
+          "codeIds": [],
+          "notApplicableDimensionIds": [],
+          "memo": "",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": false,
+          "emergingTheme": ""
+        }
+      ]
+    },
+    {
+      "id": "DOC005",
+      "title": "City neighbourhoods trial new approaches to extreme heat",
+      "metadata": {
+        "META_SOURCE": "City Environment Report",
+        "META_DATE": "2026-06-24"
+      },
+      "segments": [
+        {
+          "id": "DOC005_P001",
+          "documentId": "DOC005",
+          "number": 1,
+          "text": "The city has opened temporary cooling rooms in three neighbourhood centres and installed shade structures at two busy bus stops. Officials will compare usage during hot periods before deciding whether to extend the programme.",
+          "codeIds": [
+            "COD_GOVERNMENT",
+            "COD_HOPE_HIGH",
+            "COD_RESPONSE_ADAPT"
+          ],
+          "notApplicableDimensionIds": [],
+          "memo": "",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": true,
+          "emergingTheme": ""
+        },
+        {
+          "id": "DOC005_P002",
+          "documentId": "DOC005",
+          "number": 2,
+          "text": "Resident groups are mapping streets with little tree cover and gathering feedback from older people and outdoor workers about where additional shade would be most useful. The exercise is intended to guide future decisions rather than implement measures immediately.",
+          "codeIds": [
+            "COD_COMMUNITY",
+            "COD_HOPE_MOD"
+          ],
+          "notApplicableDimensionIds": [
+            "DIM_RESPONSE"
+          ],
+          "memo": "",
+          "confidence": "Medium",
+          "reviewStatus": "Coded",
+          "touched": true,
+          "emergingTheme": ""
+        },
+        {
+          "id": "DOC005_P003",
+          "documentId": "DOC005",
+          "number": 3,
+          "text": "A public workshop next month will review the first results and invite proposals for the following summer.",
+          "codeIds": [],
+          "notApplicableDimensionIds": [],
+          "memo": "",
+          "confidence": "High",
+          "reviewStatus": "Coded",
+          "touched": false,
+          "emergingTheme": ""
+        }
+      ]
+    }
+  ],
+  "dimensions": [
+    {
+      "id": "DIM_PROTAGONIST",
+      "name": "PROTAGONIST",
+      "type": "single",
+      "required": true,
+      "color": "#718E94",
+      "codes": [
+        {
+          "id": "COD_COMMUNITY",
+          "name": "Community",
+          "definition": "Residents, neighbourhood groups, or civil society lead the action.",
+          "origin": "A priori",
+          "color": "#EF8354",
+          "active": true
+        },
+        {
+          "id": "COD_GOVERNMENT",
+          "name": "Government",
+          "definition": "Public institutions or officials lead the action.",
+          "origin": "A priori",
+          "color": "#EF8354",
+          "active": true
+        },
+        {
+          "id": "COD_BUSINESS",
+          "name": "Business",
+          "definition": "Commercial actors lead the action.",
+          "origin": "A priori",
+          "color": "#EF8354",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "DIM_HOPE",
+      "name": "HOPE",
+      "type": "single",
+      "required": true,
+      "color": "#9A8FBE",
+      "codes": [
+        {
+          "id": "COD_HOPE_LOW",
+          "name": "Low",
+          "definition": "Little expectation of a positive outcome.",
+          "origin": "A priori",
+          "color": "#4C6FFF",
+          "active": true
+        },
+        {
+          "id": "COD_HOPE_MOD",
+          "name": "Moderate",
+          "definition": "A qualified or mixed expectation of improvement.",
+          "origin": "A priori",
+          "color": "#4C6FFF",
+          "active": true
+        },
+        {
+          "id": "COD_HOPE_HIGH",
+          "name": "High",
+          "definition": "A strong expectation of a positive outcome.",
+          "origin": "A priori",
+          "color": "#4C6FFF",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "DIM_RESPONSE",
+      "name": "RESPONSE",
+      "type": "multiple",
+      "required": false,
+      "color": "#7B8F87",
+      "codes": [
+        {
+          "id": "COD_RESPONSE_ADAPT",
+          "name": "Adaptation",
+          "definition": "Adjustment to actual or expected impacts.",
+          "origin": "A priori",
+          "color": "#26A69A",
+          "active": true
+        },
+        {
+          "id": "COD_RESPONSE_MIT",
+          "name": "Mitigation",
+          "definition": "Action to reduce causes or emissions.",
+          "origin": "A priori",
+          "color": "#26A69A",
+          "active": true
+        }
+      ]
+    }
+  ]
+}
