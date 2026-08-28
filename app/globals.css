@@ -161,8 +161,9 @@ input::placeholder, textarea::placeholder { color: #a8b1ae; }
 .metadata-empty .primary-button { margin-top: 20px; }
 .metadata-note { margin-top: 19px; padding: 16px 19px; border-left: 3px solid var(--sage); color: var(--muted); background: rgba(255,255,255,.48); font-size: 12px; line-height: 1.55; }
 
-.coding-layout { min-height: calc(100vh - 76px); display: grid; grid-template-columns: minmax(560px, 1fr) 390px; }
-.coding-main { min-width: 0; padding: 37px clamp(35px, 5vw, 76px) 32px; border-right: 1px solid var(--line); background: var(--canvas); }
+.coding-layout { min-height: calc(100vh - 76px); display: grid; grid-template-columns: minmax(430px, .9fr) minmax(500px, 1.1fr); align-items: start; }
+.coding-main { min-width: 0; min-height: calc(100vh - 76px); padding: 24px clamp(28px, 4vw, 62px) 24px; border-right: 1px solid var(--line); background: var(--canvas); }
+.sticky-segment-panel { position: sticky; top: 18px; max-height: calc(100vh - 112px); overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; padding: 13px 5px 4px 0; }
 .coding-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
 .coding-header h1 { margin: 6px 0 5px; font-family: var(--font-lora), Georgia, serif; font-size: 29px; font-weight: 500; letter-spacing: -.02em; }
 .coding-header p { margin: 0; color: var(--muted); font-size: 12px; }
@@ -174,7 +175,9 @@ input::placeholder, textarea::placeholder { color: #a8b1ae; }
 .coding-footer { margin-top: 25px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
 .coding-footer > span { color: #87918e; font-size: 11px; }
 kbd { min-width: 21px; height: 20px; padding: 0 5px; display: inline-grid; place-items: center; border: 1px solid #cfd1cc; border-bottom-width: 2px; border-radius: 4px; color: #6e7875; background: #fff; font-family: var(--font-manrope), sans-serif; font-size: 9px; }
-.code-rail { min-width: 0; padding: 37px 27px; background: white; }
+.code-rail { min-width: 0; min-height: calc(100vh - 76px); padding: 37px clamp(27px, 3vw, 48px) 54px; background: white; }
+.code-rail .annotation-fields { margin-top: 30px; padding-top: 27px; border-top: 1px solid var(--line); }
+.code-rail .annotation-fields .field-row { max-width: none; }
 .rail-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
 .rail-head h2 { margin: 7px 0 0; font-family: var(--font-manrope), sans-serif; font-size: 17px; font-weight: 650; }
 .selection-count, .count-pill { padding: 6px 9px; border-radius: 99px; color: #55716a; background: #edf3f1; font-size: 10px; font-weight: 650; white-space: nowrap; }
@@ -324,9 +327,12 @@ kbd { min-width: 21px; height: 20px; padding: 0 5px; display: inline-grid; place
 .research-export { display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: center; }
 .research-export .export-icon { align-self: start; }
 .research-export ul { margin-bottom: 0; }
+.gold-export { display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: center; border-top: 3px solid var(--lavender); }
+.gold-export .export-icon { align-self: start; }
+.gold-export ul { margin-bottom: 0; }
 
 @media (max-width: 1060px) {
-  .coding-layout { grid-template-columns: minmax(520px, 1fr) 330px; }
+  .coding-layout { grid-template-columns: minmax(390px, .9fr) minmax(390px, 1.1fr); }
   .code-buttons { grid-template-columns: 1fr; }
   .code-buttons .new-code { grid-column: auto; }
   .inline-new { grid-column: auto; }
@@ -361,6 +367,7 @@ kbd { min-width: 21px; height: 20px; padding: 0 5px; display: inline-grid; place
   .progress-card .primary-button { width: 100%; }
   .coding-layout { display: block; }
   .coding-main { padding: 30px 22px; border-right: 0; }
+  .sticky-segment-panel { position: static; max-height: none; overflow: visible; padding: 0; }
   .code-rail { border-top: 1px solid var(--line); }
   .code-buttons { grid-template-columns: 1fr 1fr; }
   .code-buttons .new-code { grid-column: 1 / -1; }
@@ -374,8 +381,8 @@ kbd { min-width: 21px; height: 20px; padding: 0 5px; display: inline-grid; place
   .bar-labels { display: none; }
   .bar-row { grid-template-columns: 110px 1fr 30px 48px 80px; }
   .project-grid { grid-template-columns: 1fr; }
-  .research-export { grid-template-columns: auto 1fr; }
-  .research-export > button { grid-column: 1 / -1; }
+  .research-export, .gold-export { grid-template-columns: auto 1fr; }
+  .research-export > button, .gold-export > button { grid-column: 1 / -1; }
 }
 @media (max-width: 540px) {
   .top-actions .text-button { display: none; }
