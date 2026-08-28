@@ -168,16 +168,16 @@ input::placeholder, textarea::placeholder { color: #a8b1ae; }
 .coding-header h1 { margin: 6px 0 5px; font-family: var(--font-lora), Georgia, serif; font-size: 29px; font-weight: 500; letter-spacing: -.02em; }
 .coding-header p { margin: 0; color: var(--muted); font-size: 12px; }
 .segment-meta { margin: 35px 0 9px; display: flex; justify-content: space-between; color: #85908d; font-size: 10px; font-weight: 730; letter-spacing: .11em; }
-.paragraph-card { min-height: 220px; max-height: calc(100vh - 390px); overflow-y: auto; padding: clamp(35px, 5vw, 58px); display: flex; align-items: center; border: 1px solid var(--line); border-radius: 7px; background: var(--paper); box-shadow: 0 2px 8px rgba(45,65,72,.03); }
+.paragraph-card { min-height: clamp(150px, 22vh, 220px); max-height: clamp(150px, calc(100vh - 545px), 360px); overflow-y: auto; padding: clamp(28px, 4vw, 48px); display: flex; align-items: center; border: 1px solid var(--line); border-radius: 7px; background: var(--paper); box-shadow: 0 2px 8px rgba(45,65,72,.03); }
 .paragraph-card p { margin: 0; font-family: var(--font-lora), Georgia, serif; font-size: clamp(20px, 2vw, 23px); line-height: 1.72; letter-spacing: -.008em; }
 .annotation-fields { margin-top: 22px; display: grid; gap: 14px; }
+.segment-fields { margin-top: 18px; gap: 12px; }
+.segment-fields textarea { min-height: 62px; max-height: 110px; }
 .field-row { margin: 0; max-width: 480px; }
 .coding-footer { margin-top: 25px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
 .coding-footer > span { color: #87918e; font-size: 11px; }
 kbd { min-width: 21px; height: 20px; padding: 0 5px; display: inline-grid; place-items: center; border: 1px solid #cfd1cc; border-bottom-width: 2px; border-radius: 4px; color: #6e7875; background: #fff; font-family: var(--font-manrope), sans-serif; font-size: 9px; }
 .code-rail { min-width: 0; min-height: calc(100vh - 76px); padding: 37px clamp(27px, 3vw, 48px) 54px; background: white; }
-.code-rail .annotation-fields { margin-top: 30px; padding-top: 27px; border-top: 1px solid var(--line); }
-.code-rail .annotation-fields .field-row { max-width: none; }
 .rail-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
 .rail-head h2 { margin: 7px 0 0; font-family: var(--font-manrope), sans-serif; font-size: 17px; font-weight: 650; }
 .selection-count, .count-pill { padding: 6px 9px; border-radius: 99px; color: #55716a; background: #edf3f1; font-size: 10px; font-weight: 650; white-space: nowrap; }
